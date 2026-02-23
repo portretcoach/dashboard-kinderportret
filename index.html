@@ -413,6 +413,66 @@
         .do-col li::before { background: #4caf50 !important; }
         .dont-col li::before { background: #e57373 !important; }
 
+        .styling-photos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.2rem 0;
+        }
+
+        .styling-photos img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            object-fit: cover;
+            aspect-ratio: 3/4;
+        }
+
+        .styling-photos.trio {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media (max-width: 600px) {
+            .styling-photos {
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
+            .styling-photos.trio {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .cool-col {
+            background: #e8eff5;
+            padding: 1.2rem;
+            border-radius: 10px;
+            border-top: 3px solid #5b8fa8;
+        }
+
+        .warm-col {
+            background: #f5efe4;
+            padding: 1.2rem;
+            border-radius: 10px;
+            border-top: 3px solid #c4956a;
+        }
+
+        .cool-col h5 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            margin-bottom: 0.6rem;
+            color: #3a6e8a;
+        }
+
+        .warm-col h5 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            margin-bottom: 0.6rem;
+            color: #9a7040;
+        }
+
+        .cool-col li::before { background: #5b8fa8 !important; }
+        .warm-col li::before { background: #c4956a !important; }
+
         /* Contact bar */
         .contact-bar {
             background: var(--teal-dark);
@@ -523,6 +583,7 @@
     <button class="nav-btn" data-section="locatie">Locatie &amp; Parkeren</button>
     <button class="nav-btn" data-section="nadesessie">Na de Sessie</button>
     <button class="nav-btn" data-section="prijzen">Prijzen &amp; Wall Art</button>
+    <button class="nav-btn" data-section="delijst">De Lijst</button>
     <button class="nav-btn" data-section="contact">Contact</button>
     <button class="nav-btn" data-section="voorwaarden">Voorwaarden</button>
 </nav>
@@ -546,7 +607,7 @@
                     <div class="step-num">2</div>
                     <div class="step-content">
                         <h4>Persoonlijk Consult</h4>
-                        <p>We bespreken samen de kleding en kleuren die passen bij jouw kind. Ik kijk persoonlijk mee naar geschikte kledingstukken dankzij mijn ervaring als kleurstylist.</p>
+                        <p>We bespreken samen de kleding en kleuren die passen bij jouw kind. Ik kijk persoonlijk mee naar geschikte kledingstukken.</p>
                     </div>
                 </div>
                 <div class="step">
@@ -585,15 +646,18 @@
     <div class="section" id="voorbereiding">
         <div class="card">
             <h3>Je kind voorbereiden</h3>
-            <p>Het allerbelangrijkste: maak er geen groots ding van. Kinderen voelen spanning en dat beïnvloedt de foto's. Houd het luchtig en ontspannen.</p>
+            <p>In mijn ervaring helpt het als kinderen van tevoren goed weten wat ze gaan doen. Je kan samen de brochure bekijken of de website.</p>
+            <p>Je kunt ze uitleggen hoe het in zijn werk zou gaan en hoe lang het duurt. Ook kan het helpen om te vertellen dat ze niet op een bepaalde manier hoeven te kijken. Het gaat juist om ontspannen zichzelf zijn. Hoe meer instructies ze krijgen over hoe ze moeten kijken, hoe krampachtiger het vaak wordt.</p>
+            <p>Neem ze ook mee in de kledingkeuze. Kinderen houden van autonomie. En tegelijkertijd wil je qua styling niet helemaal de vrije hand geven. Daarom kan het helpen om een voorselectie te maken, waaruit het kind zelf kan kiezen.</p>
 
             <h4>Tips voor de dag zelf</h4>
             <ul>
                 <li>Zorg dat je kind uitgerust is. Plan de sessie op een moment dat past bij het ritme van je kind</li>
                 <li>Vertel je kind dat jullie iets leuks gaan doen, zonder te veel druk op het resultaat</li>
                 <li>Baby's en peuters: plan rond slaap- en voedingstijden</li>
-                <li>Tieners: laat ze meedenken over kleding, dat geeft zelfvertrouwen</li>
+                <li>Tieners: laat ze meedenken over de sfeer en kleding. Dat geeft zelfvertrouwen</li>
                 <li>In de studio staan drankjes en een tussendoortje klaar, daar hoef je niet aan te denken</li>
+                <li>Let op schone ongelakte nagels</li>
             </ul>
 
             <div class="tip">
@@ -605,15 +669,16 @@
             <h3>Wat neem je mee?</h3>
             <ul>
                 <li>Ruim voldoende kleding. We kiezen samen in de studio wat het beste werkt</li>
-                <li>Meerdere sets (bovenstukken) in verschillende kleuren</li>
+                <li>Meerdere sets (zowel boven- als onderkleding, tenzij je alleen een close up portret wilt) in verschillende kleuren</li>
                 <li>Kleding gewassen en gestreken</li>
-                <li>Eventueel bijpassende schoenen (komen soms in beeld)</li>
-                <li>Een favoriete knuffel of speeltje voor de jongste kinderen (voor het wennen)</li>
+
+                <li>Eventueel een favoriete knuffel of speeltje. Er is wat speelgoed aanwezig</li>
+                <li>Haarborstel en eventuele haarproducten</li>
             </ul>
 
             <div class="highlight">
-                <h4>Consult Formulier</h4>
-                <p>Voor de sessie ontvang je een formulier met vragen over:</p>
+                <h4>Consult</h4>
+                <p>Ongeveer twee weken voorafgaand aan de sessie plannen we een telefonisch gesprek. Hierin bespreken we onderstaande punten.</p>
                 <ul>
                     <li>Naam en leeftijd van je kind(eren)</li>
                     <li>Wat je graag in de portretten wilt zien</li>
@@ -631,19 +696,19 @@
         <div class="card">
             <h3>Kleding &amp; Styling voor Kinderen</h3>
             <p>Het tijdloze van de portretten zit niet alleen in het licht en de uitdrukking, maar ook in de kleding en kleuren. De kleding speelt een ondersteunende rol. Het gaat om je kind, niet om de outfit. Houd het simpel en kies iets waar je kind zich prettig in voelt.</p>
-            <p>Ik heb ervaring als kleurstylist en kijk persoonlijk met je mee naar geschikte kledingstukken. Samen zorgen we ervoor dat de kleding past bij je kind én bij het portret dat we voor ogen hebben.</p>
+            <p>Ik kijk persoonlijk met je mee naar geschikte kledingstukken. Samen zorgen we ervoor dat de kleding past bij je kind én bij het portret dat we voor ogen hebben.</p>
 
             <div class="tip">
                 <p><strong>Belangrijk:</strong> Dit zijn richtlijnen, geen harde regels. Neem ruim voldoende kleding mee, we kiezen samen in de studio wat het beste past.</p>
             </div>
 
-            <!-- Voorbeeld foto's -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.8rem; margin: 1.5rem 0;">
-                <img src="https://images.squarespace-cdn.com/content/v1/630cca27c734573335c89e80/440b0ac7-9811-46c3-8455-4db64bb17490/Tygo-52-bewerkt.jpg" alt="Kinderportret voorbeeld" style="width: 100%; border-radius: 8px; aspect-ratio: 3/4; object-fit: cover;">
-                <img src="https://images.squarespace-cdn.com/content/v1/630cca27c734573335c89e80/0cacb88b-1c9c-494a-8484-fb782e412b83/irisvantriet-fleur-2024-1.jpg" alt="Kinderportret voorbeeld" style="width: 100%; border-radius: 8px; aspect-ratio: 3/4; object-fit: cover;">
-                <img src="https://images.squarespace-cdn.com/content/v1/630cca27c734573335c89e80/1682682129500-OG31P5ZCPSPOBAA0RL5F/IrisValentina-tishara-2021-1-2.jpg" alt="Kinderportret voorbeeld" style="width: 100%; border-radius: 8px; aspect-ratio: 3/4; object-fit: cover;">
+            <p>Je mag vooraf gerust foto's van je kinderen sturen via WhatsApp, dan kan ik alvast meekijken naar kleurtonen en advies geven over wat goed zou passen.</p>
+
+            <div class="styling-photos">
+                <img src="images/bo-kai_irisvantriet-2026-digitaalgebruik-4.jpg" alt="Portret klein kind in donkerblauwe trui">
+                <img src="images/Bobbi_mikki-0020053-bewerkt.jpg" alt="Portret meisje in lichtblauwe kanten jurk">
             </div>
-            <p style="font-size: 0.82rem; color: var(--text-light); text-align: center; margin-top: -0.5rem;">Kijk hoe effen, rustige kleuren de aandacht naar het gezicht leiden</p>
+
         </div>
 
         <div class="card">
@@ -674,41 +739,42 @@
                     </ul>
                 </div>
             </div>
+
+            <div class="styling-photos">
+                <img src="images/Bobbi_mikki-0020029-bewerkt.jpg" alt="Portret met donkergroene blouse met fijn kant">
+                <img src="images/Kenneth-207-bewerkt-bewerkt.jpg" alt="Portret met donkerbruine trui, simpel en aansluitend">
+            </div>
         </div>
 
         <div class="card">
             <h3>Welke kleuren passen bij je kind?</h3>
-            <p>De kleuren die je kiest hebben invloed op de sfeer van het portret. Medium tot donkere kleuren werken vaak het mooist en leiden de aandacht naar het gezicht. Ik help je graag met een persoonlijk kleuradvies.</p>
+            <p>De kleuren die je kiest hebben invloed op de sfeer van het portret. Medium tot donkere kleuren werken vaak het mooist en leiden de aandacht naar het gezicht. Het ligt aan de ondertoon van de huid, ogen en haren of warme of koele kleuren het mooist staan. Een kleurstylist kan een kleurenpalet op maat maken, dus ik houd het hier bij de basis.</p>
 
-            <h4>Warme of koele ondertoon?</h4>
-            <p>Heeft je kind een gouden of perzikachtige gloed in de huid? Dan passen warme kleuren mooi (denk aan oranje, warmgeel, bruin, olijfgroen). Bij een blauwige of rozige ondertoon staan koele tinten mooier (denk aan blauwgrijzen, groenblauwen, roze, bordeauxrood).</p>
-            <p>Qua haar herken je koel aan askleurig, grijs, platina of gitzwarte tinten. Bij warme haarkleuren denk je meer aan warm blond, honingkleur, koper- of kastanjebruin.</p>
+            <h4>Warm of koel type?</h4>
+            <p>In principe kan iedereen elke kleur dragen (op oranje na), maar het gaat erom naar welke ondertoon de kleur neigt. Zo kan paars naar blauw neigen (koele paars), maar ook naar rood (warme paars). Zit er meer warmte in de ondertoon van je kind, dan staan warme tinten meestal mooier. Is je kind wat koeler van toon, dan kan je beter kiezen voor koele tinten.</p>
 
+            <h4>Herkennen aan de huid</h4>
+            <p>Heeft je kind een wat blauwige of rozige gloed in de huid? Dan is dat vaak het koele type. Warme types herken je meer aan een gouden of perzikachtige gloed in de huid.</p>
+
+            <h4>Herkennen aan het haar</h4>
+            <p>Koele haarkleuren zijn askleurig, grijs, platina of gitzwart. Warme haarkleuren zijn warm blond, honingkleur, koper- of kastanjebruin.</p>
+
+            <h4>Herkennen aan de ogen</h4>
+            <p>Warme oogkleuren zijn olijfgroen, licht tot donkerbruin en warm blauw. Koele oogkleuren zijn koel blauw, grijs, koel groen en donkergrijs.</p>
+
+
+
+            <h4>Koele kleuren</h4>
             <div class="color-grid">
-                <div class="color-swatch">
-                    <div class="swatch-circle" style="background: #2d5a4e;"></div>
-                    <h5>Donkergroen</h5>
-                    <p>Rust &amp; natuur</p>
-                </div>
                 <div class="color-swatch">
                     <div class="swatch-circle" style="background: #2a5a7a;"></div>
                     <h5>Petrolblauw</h5>
                     <p>Diepte &amp; sereniteit</p>
                 </div>
                 <div class="color-swatch">
-                    <div class="swatch-circle" style="background: #8b4513;"></div>
-                    <h5>Cognac</h5>
-                    <p>Warm &amp; tijdloos</p>
-                </div>
-                <div class="color-swatch">
-                    <div class="swatch-circle" style="background: #6b3a5a;"></div>
-                    <h5>Aubergine</h5>
-                    <p>Rijk &amp; sfeervol</p>
-                </div>
-                <div class="color-swatch">
-                    <div class="swatch-circle" style="background: #c4856a;"></div>
-                    <h5>Terra / Roest</h5>
-                    <p>Warmte &amp; zachtheid</p>
+                    <div class="swatch-circle" style="background: #4a6e82;"></div>
+                    <h5>Groenblauw</h5>
+                    <p>Fris &amp; rustig</p>
                 </div>
                 <div class="color-swatch">
                     <div class="swatch-circle" style="background: #7a2e2e;"></div>
@@ -716,28 +782,117 @@
                     <p>Klassiek &amp; krachtig</p>
                 </div>
                 <div class="color-swatch">
-                    <div class="swatch-circle" style="background: #d4a574;"></div>
-                    <h5>Camel</h5>
-                    <p>Zacht &amp; natuurlijk</p>
+                    <div class="swatch-circle" style="background: #6b3a5a;"></div>
+                    <h5>Aubergine</h5>
+                    <p>Rijk &amp; sfeervol</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-circle" style="background: #c48a9a;"></div>
+                    <h5>Oud roze</h5>
+                    <p>Zacht &amp; romantisch</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-circle" style="background: #6a7a8a;"></div>
+                    <h5>Blauwgrijs</h5>
+                    <p>Rustig &amp; elegant</p>
                 </div>
                 <div class="color-swatch">
                     <div class="swatch-circle" style="background: #4a4a4a;"></div>
                     <h5>Antraciet</h5>
                     <p>Strak &amp; tijdloos</p>
                 </div>
+                <div class="color-swatch">
+                    <div class="swatch-circle" style="background: #7a6a5a;"></div>
+                    <h5>Grijsbruin</h5>
+                    <p>Ingetogen &amp; zacht</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-circle" style="background: #2d5a4e;"></div>
+                    <h5>Donkergroen</h5>
+                    <p>Rust &amp; natuur</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-circle" style="background: #3e3e5e;"></div>
+                    <h5>Donkerblauw</h5>
+                    <p>Diep &amp; verfijnd</p>
+                </div>
             </div>
 
-            <!-- Voorbeeld foto's kleuren -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 1.5rem 0;">
-                <img src="https://images.squarespace-cdn.com/content/v1/630cca27c734573335c89e80/716ed9a9-5092-4c87-98f4-12c20c1a5a50/Fleur-57-bewerkt.jpg" alt="Voorbeeld kleurkeuze portret" style="width: 100%; border-radius: 8px; aspect-ratio: 4/5; object-fit: cover;">
-                <img src="https://images.squarespace-cdn.com/content/v1/630cca27c734573335c89e80/4a13e55b-185c-447d-888b-61d82cb4a4e0/IrisValentina-feline-thom-1.jpg" alt="Voorbeeld kleurkeuze portret" style="width: 100%; border-radius: 8px; aspect-ratio: 4/5; object-fit: cover;">
+            <div class="styling-photos">
+                <img src="images/Thom_Lauren_Julian-66_89A4735-bewerkt.jpg" alt="Portret jongen in petrolblauw overhemd">
+                <img src="images/IrisValentina_Egemen-15_89A2187-bewerkt.jpg" alt="Portret jongen in donkere coltrui">
             </div>
+
+            <h4>Warme kleuren</h4>
+            <div class="color-grid">
+                <div class="color-swatch">
+                    <div class="swatch-circle" style="background: #c4856a;"></div>
+                    <h5>Terra / Roest</h5>
+                    <p>Warmte &amp; zachtheid</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-circle" style="background: #8b4513;"></div>
+                    <h5>Cognac</h5>
+                    <p>Warm &amp; tijdloos</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-circle" style="background: #d4a574;"></div>
+                    <h5>Camel</h5>
+                    <p>Zacht &amp; natuurlijk</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-circle" style="background: #6b7a3a;"></div>
+                    <h5>Olijfgroen</h5>
+                    <p>Aards &amp; warm</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-circle" style="background: #c87533;"></div>
+                    <h5>Oranje</h5>
+                    <p>Levendig &amp; warm</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-circle" style="background: #d4a03c;"></div>
+                    <h5>Warmgeel</h5>
+                    <p>Zonnig &amp; vrolijk</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-circle" style="background: #5c3a1e;"></div>
+                    <h5>Chocolade</h5>
+                    <p>Diep &amp; warm</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-circle" style="background: #b5651d;"></div>
+                    <h5>Honingbruin</h5>
+                    <p>Goud &amp; gezellig</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-circle" style="background: #a0522d;"></div>
+                    <h5>Kastanje</h5>
+                    <p>Rijk &amp; klassiek</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-circle" style="background: #cc5a3a;"></div>
+                    <h5>Warmrood</h5>
+                    <p>Krachtig &amp; levendig</p>
+                </div>
+            </div>
+
+            <div class="styling-photos">
+                <img src="images/Annalisa_workshop-56-bewerkt.jpg" alt="Portret meisje in okergele jurk">
+                <img src="images/Fleur-115_89A4146-bewerkt.jpg" alt="Portret meisje met okerkleurige gehaakte sjaal">
+            </div>
+
         </div>
 
         <div class="card">
             <h3>Licht of donker?</h3>
             <p>Ik vind het zelf een rustig beeld geven als er niet teveel contrast is. Daarom kies ik vaak donkere kleuren op een donkere achtergrond en vice versa. Ben je zelf licht van kleur, dan werken lichtere kleuren prettig. Ben je donkerder, dan geven donkere kleuren weer meer rust.</p>
-            <p>Wit dragen mag, maar het komt met een disclaimer: het leidt het oog af. Je kijkt namelijk vanzelf naar het lichtste deel in de foto. Je wilt dat dit je gezicht is, want daar draait het om.</p>
+            <p>Wit dragen mag, maar het komt met een disclaimer: spierwit leidt het oog af, dus gebruik liever een off-white. Je kijkt namelijk vanzelf naar het lichtste deel in de foto. Je wilt dat dit je gezicht is, want daar draait het om.</p>
+
+            <div class="styling-photos">
+                <img src="images/Imani_workshop_maart-31-bewerkt.jpg" alt="Donkere kleding op donkere achtergrond">
+                <img src="images/Pipp-143-bewerkt.jpg" alt="Lichte kleding op lichte achtergrond">
+            </div>
 
             <div class="highlight">
                 <h4>Achtergronden in de studio</h4>
@@ -752,17 +907,17 @@
         <div class="card">
             <h3>Denk ook aan...</h3>
             <ul>
-                <li><strong>Onderkleding:</strong> Kies medium tot donkere kleuren voor broek of rok, zodat de aandacht niet van het gezicht wegtrekt. Ook hemdjes of bh's die niet doorschijnen zijn fijn om mee te nemen</li>
+                <li><strong>Onderkleding:</strong> Kies medium tot donkere kleuren voor broek of rok, zodat de aandacht niet van het gezicht wegtrekt</li>
                 <li><strong>Haar:</strong> Houd het natuurlijk en dicht bij hoe je kind er normaal uitziet. Kam of borstel het haar voor de sessie</li>
                 <li><strong>Droge lippen:</strong> Smeer de lippen van je kind in vóór de sessie (labello/vaseline)</li>
                 <li><strong>Nagels:</strong> Let op schone, verzorgde nagels, handen komen soms in beeld</li>
-                <li><strong>Schoenen:</strong> Neem bijpassende schoenen mee, deze kunnen in beeld komen</li>
             </ul>
 
-            <!-- Sfeerbeeld -->
-            <div style="margin: 1.5rem 0;">
-                <img src="https://images.squarespace-cdn.com/content/v1/630cca27c734573335c89e80/3982beac-2dd4-46ba-a9a5-c08d567d5fc3/romy_irisvantriet-2025-7.jpg" alt="Portret voorbeeld" style="width: 100%; border-radius: 8px; max-height: 400px; object-fit: cover;">
+            <div class="styling-photos">
+                <img src="images/IrisValentina_Lotte-31_89A2251-bewerkt.jpg" alt="Portret meisje met petrolblauwe blouse">
+                <img src="images/zeylon_nouela_irisvantriet-2026-digitaalgebruik-6.jpg" alt="Portret jongen in zwarte trui op donkere achtergrond">
             </div>
+
         </div>
     </div>
 
@@ -824,7 +979,6 @@
             <div class="highlight">
                 <h4>Studio Adres</h4>
                 <p style="font-size: 1.1rem; font-weight: 500;">Weg en Bos 22C, Bergschenhoek</p>
-                <p>(nabij Rotterdam)</p>
             </div>
 
             <img src="images/fotostudiobergschenhoek.jpg" alt="Fotostudio Weg en Bos 22C Bergschenhoek" style="width: 100%; border-radius: 10px; margin: 1.2rem 0;">
@@ -840,17 +994,6 @@
             <img src="images/parkeren-studio-bergschenhoek.png" alt="Parkeerkaart studio met paars gearceerd parkeergebied" style="width: 100%; border-radius: 10px; margin: 1.2rem 0;">
         </div>
 
-        <div class="card">
-            <h4>Bereikbaarheid</h4>
-            <ul>
-                <li>Goed bereikbaar vanuit Rotterdam, Den Haag en omstreken</li>
-                <li>Gelegen in Bergschenhoek, een rustige locatie nabij Rotterdam</li>
-            </ul>
-
-            <div class="tip">
-                <p><strong>Tip:</strong> Plan ruim op tijd. Liever 5 minuten te vroeg dan gehaast binnenkomen. Dat helpt ook je kind om ontspannen de sessie in te gaan.</p>
-            </div>
-        </div>
     </div>
 
     <!-- NA DE SESSIE -->
@@ -859,7 +1002,7 @@
             <h3>Na de sessie</h3>
 
             <h4>Online Galerij</h4>
-            <p>Binnen een week na de sessie ontvang je een link naar een online galerij met de beste foto's. Deze zijn nog niet nabewerkt, maar geven een goed beeld van het resultaat.</p>
+            <p>Binnen een week na de sessie ontvang je een link naar een online galerij met de beste foto's. Deze zijn nog niet nabewerkt, maar geven alvast een beeld van het resultaat.</p>
 
             <h4>Jouw Keuze</h4>
             <p>Uit de galerij kies je het portret dat aan de muur mag. Neem hier rustig de tijd voor. Het is een keuze die je elke dag opnieuw ziet.</p>
@@ -868,11 +1011,7 @@
             <p>Het gekozen portret wordt zorgvuldig nabewerkt. Eventuele oneffenheden worden in Photoshop verwijderd. De nabewerking zorgt voor de sfeervolle, schilderachtige uitstraling.</p>
 
             <h4>Levering</h4>
-            <ul>
-                <li><strong>Fine art prints:</strong> worden besteld bij een speciaal fine art printlab en geleverd binnen 2 weken</li>
-                <li><strong>Baklijsten:</strong> levering tot 4 weken</li>
-                <li>Het standaardformaat is 40x56cm, maar grotere of kleinere formaten zijn ook mogelijk</li>
-            </ul>
+            <p>De levertijd van de lijst is ongeveer vier weken. Het standaardformaat is 40x56cm, maar grotere of kleinere formaten zijn ook mogelijk.</p>
 
             <div class="tip">
                 <p><strong>Extra bestellen:</strong> Wil je extra prints, digitale bestanden of wall art? Dat kan altijd. Bekijk de prijzen onder het tabblad "Prijzen &amp; Wall Art".</p>
@@ -892,7 +1031,6 @@
                 <p style="margin-top: 0.8rem;">Elk volgend kind in hetzelfde gezin: <strong>€ 100,- korting</strong></p>
             </div>
 
-            <p>Het portret is niet zomaar een foto. Het is een kunstwerk dat je kind laat zien zoals jij het kent. Gemaakt met hoogwaardige materialen, om generaties mee te gaan.</p>
         </div>
 
         <div class="card">
@@ -968,8 +1106,76 @@
             </table>
 
             <div class="tip">
-                <p><strong>Let op:</strong> Alle portretten worden eerst digitaal geleverd. Het printen gebeurt in eigen beheer bij een speciaal fine art printlab voor de hoogste kwaliteit.</p>
+                <p><strong>Let op!</strong> De portretten worden enkel voor digitaal gebruik geleverd. Het printen gebeurt in eigen beheer bij een speciaal fine art printlab om de hoogste kwaliteit te garanderen.</p>
             </div>
+        </div>
+
+        <div class="card">
+            <h3>Vergroten inbegrepen baklijst</h3>
+            <p>Het standaardformaat van de inbegrepen baklijst is 40 x 56 cm. Wil je een groter formaat? Dat kan tegen een meerprijs van € 50,- per stap.</p>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Formaat</th>
+                        <th>Meerprijs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>40 x 56 cm (standaard)</td><td class="price">inbegrepen</td></tr>
+                    <tr><td>50 x 70 cm</td><td class="price">+ € 50,-</td></tr>
+                    <tr><td>60 x 84 cm</td><td class="price">+ € 100,-</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- DE LIJST -->
+    <div class="section" id="delijst">
+        <div class="card">
+            <h3>De Lijst</h3>
+            <p>Bij de fotoshoot is een fine art print in baklijst inbegrepen, in het standaardformaat 40 x 56 cm. Wil je het groter of kleiner? Dat kan. En uiteraard kun je ook extra prints bestellen, bijvoorbeeld voor opa's en oma's. Dit kan op papier of op MDF. In de studio laat ik je graag voorbeelden zien.</p>
+
+            <img src="images/ylsemetlijst.png" alt="Meisje met ingelijst portret" style="max-width: 400px; width: 100%; border-radius: 10px; margin: 1.2rem 0;">
+        </div>
+
+        <div class="card">
+            <h3>Vakwerk &amp; Materialen</h3>
+            <p>De producten worden vervaardigd door een gespecialiseerd vaklab. Met speciale technieken en materialen leveren zij hoogwaardige kwaliteit die je ziet en voelt.</p>
+
+            <p>Het portret wordt geprint als fine art print met een lichte textuur, wat het schilderachtige karakter versterkt. De print wordt vervolgens gemonteerd op aluminium en zwevend geplaatst in een houten baklijst. De lijst komt zonder glas, wat het schilderachtige effect extra benadrukt.</p>
+
+            <div class="highlight" style="margin: 1.5rem 0;">
+                <h4>Standaard: zwarte houten baklijst</h4>
+                <p>Andere kleuren zijn ook mogelijk. Denk aan wit, naturel eiken of donker walnoot.</p>
+            </div>
+
+            <img src="images/Baklijsten voor mail.jpg" alt="Beschikbare baklijsten in verschillende houtsoorten en kleuren" style="max-width: 350px; width: 100%; border-radius: 10px; margin: 1.2rem 0;">
+        </div>
+
+        <div class="card">
+            <h3>Museumkwaliteit</h3>
+            <p>Het papier is van museumkwaliteit en blijft onder alle omstandigheden goed, ook in direct zonlicht. Je portret gaat generaties lang mee zonder verkleuring.</p>
+
+            <div class="highlight" style="margin: 1.5rem 0;">
+                <h4>Omgaan met je print</h4>
+                <p>Omdat de lijst zonder glas wordt geleverd, is de print kwetsbaar. Houd rekening met het volgende:</p>
+                <ul>
+                    <li>Pak de lijst altijd aan de zijkanten of achterkant vast</li>
+                    <li>Raak de print zelf nooit aan, ook niet met schone handen</li>
+                    <li>Je ontvangt handschoentjes van mij om de lijst veilig uit te pakken en op te hangen</li>
+                    <li>Instrueer eventueel de schoonmaker om de print nooit aan te raken of schoon te maken</li>
+                    <li>Na ontvangst ben je zelf verantwoordelijk voor de zorg van het product. Eventuele schade kan achteraf niet op de fotograaf worden verhaald. Een nabestelling doen kan tegen kostprijs</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>De Techniek</h3>
+            <p>De prints worden gemaakt met een Epson SureColor P20000, een 64 inch grootformaatprinter met de PrecisionCore MicroTFP-printkop. Deze printer werkt met 10 kleuren UltraChrome Pro-inkt, waaronder 2 zwart- en 3 grijstinten. Door de hoge dichtheid zijn de overgangen tussen tinten uiterst vloeiend.</p>
+
+            <p>Het resultaat: heldere, levendige kleuren met een breed Pantone-gecertificeerd kleurbereik. Dit maakt het verschil tussen een gewone afdruk en een echte fine art print.</p>
+
+            <img src="images/image001.png" alt="MASA Print vaklab" style="max-width: 200px; margin: 1.2rem 0; opacity: 0.7;">
         </div>
     </div>
 
@@ -982,9 +1188,9 @@
             <div class="highlight">
                 <h4>Contactgegevens</h4>
                 <ul>
-                    <li><strong>E-mail:</strong> info@irisvantriet.nl</li>
-                    <li><strong>Telefoon / WhatsApp:</strong> 06-19817596</li>
-                    <li><strong>Instagram:</strong> @studio_irisvantriet</li>
+                    <li><strong>E-mail:</strong> <a href="mailto:info@irisvantriet.nl" style="color: rgba(255,255,255,0.85);">info@irisvantriet.nl</a></li>
+                    <li><strong>Telefoon / WhatsApp:</strong> <a href="tel:0619817596" style="color: rgba(255,255,255,0.85);">06-19817596</a></li>
+                    <li><strong>Instagram:</strong> <a href="https://www.instagram.com/studio_irisvantriet" target="_blank" style="color: rgba(255,255,255,0.85);">@studio_irisvantriet</a></li>
                 </ul>
             </div>
 
