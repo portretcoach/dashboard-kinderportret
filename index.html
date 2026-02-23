@@ -1305,6 +1305,12 @@
     const navBtns = document.querySelectorAll('.nav-btn');
     const sections = document.querySelectorAll('.section');
 
+    // Send height to parent window (for iframe embed)
+    function sendHeight() {
+        const height = document.documentElement.scrollHeight;
+        window.parent.postMessage({ type: 'resize', height: height }, '*');
+    }
+
     navBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const target = btn.dataset.section;
@@ -1317,10 +1323,20 @@
             sections.forEach(s => s.classList.remove('active'));
             document.getElementById(target).classList.add('active');
 
-            // Scroll to top of content
-            window.scrollTo({ top: document.querySelector('.nav').offsetTop - 20, behavior: 'smooth' });
+            // Scroll to top of content on parent page
+            window.parent.postMessage({ type: 'scrollToTop' }, '*');
+
+            // Update iframe height after section switch
+            setTimeout(sendHeight, 100);
         });
     });
+
+    // Send height on load and on resize
+    window.addEventListener('load', sendHeight);
+    window.addEventListener('resize', sendHeight);
+
+    // Also observe DOM changes that might affect height
+    new MutationObserver(sendHeight).observe(document.body, { childList: true, subtree: true, attributes: true });
 </script>
 
 </body>
