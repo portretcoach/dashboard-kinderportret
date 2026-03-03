@@ -8,8 +8,9 @@ Single-page client dashboard for kids portrait photography sessions at Studio Ir
 
 ## Architecture
 
-- **Single HTML file** (`index.html`): contains all HTML, CSS, and JavaScript inline. No build tools, no framework.
-- **Tab navigation**: vanilla JS toggles visibility of `.section` divs using `data-section` attributes on nav buttons. Sections: stappenplan, voorbereiding, kleding, sessie, locatie, nadesessie, prijzen, delijst, contact, voorwaarden.
+- **Single HTML file** (`index.html`, ~1360 lines): all HTML, CSS, and JavaScript inline. No build tools, no framework. Language: Dutch (`lang="nl"`).
+- **Iframe embed**: designed to be embedded in the main irisvantriet.nl website. JS sends `postMessage` to parent: `{ type: 'resize', height }` and `{ type: 'scrollToTop' }`. A `MutationObserver` auto-updates height on DOM changes.
+- **Tab navigation**: vanilla JS toggles `.active` class on `.section` divs. Nav buttons have `data-section` attributes matching section `id` values. Sections: stappenplan, voorbereiding, kleding, sessie, locatie, nadesessie, prijzen, delijst, contact, voorwaarden.
 - **Images**: all portfolio and location photos are local in `images/`. No external CDN dependencies.
 
 ## Running Locally
@@ -25,8 +26,10 @@ Then open `http://localhost:8080`
 CSS custom properties in `:root`:
 - `--teal-dark: #264d5e` (primary dark blue, matches irisvantriet.nl header)
 - `--teal: #2f6178` and `--teal-light: #3a7a94` (lighter variants)
-- `--terra: #b8897a` (accent, used for headings and highlights)
-- `--cream: #f5f0eb` (page background)
+- `--terra: #b8897a` (accent, used for headings and highlights), `--terra-light`, `--terra-pale` (lighter variants)
+- `--cream: #f5f0eb` (page background), `--cream-dark: #ebe3db`
+- `--gold: #c9a96e` (used in header gradient accent line)
+- Text colors: `--text-dark: #2a2a2a`, `--text-medium: #5a5a5a`, `--text-light: #8a8a8a`
 - Fonts: Playfair Display (headings) + Inter (body), loaded from Google Fonts
 
 ## Key CSS Classes
